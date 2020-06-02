@@ -1,3 +1,4 @@
+let container = document.getElementById('container');
 let myLibrary = [];
 
 function Book(title, author, pages, read)
@@ -18,12 +19,25 @@ function Book(title, author, pages, read)
     }
 }
 
-function addBookToLibrary() 
+function addBookToLibrary(title, author, pages, read) 
 {
-
+    myLibrary.push(new Book(title, author, pages, read));
 }
+
+/* TESTING */
+addBookToLibrary("Sample Title", "John Doe", 325, true);
+addBookToLibrary("Another Title", "Jane Doe", 375, true);
+addBookToLibrary("Sample Title", "John Doe", 325, true);
+
 
 function render()
 {
-    
+    for(let i = 0; i < myLibrary.length; i++)
+    {
+        const bookCell = document.createElement('div');
+        bookCell.classList.add("bookCell");
+        container.appendChild(bookCell);
+    }
 }
+
+render();
