@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css"></link>
     <title>Library</title> 
     <body>
-        <div class="toolBar">Library</div>
+        <div class="toolBar">
+            <div class="logo">Library</div>
+            <form id="bookForm">
+                <input id="titleInput" type="text" placeholder="Title" required>
+                <input id="authorInput" type="text" placeholder="Author" required>
+                <input id="pagesInput" type="text" placeholder="No. of Pages" required>
+                <label id="readLabel"> <input id="readButton" type="radio" name="read"> Read</label>
+                <button id="addButton" type="button">Add to Library</button>
+              </form>
+        </div>
         <center>
             <div id="container"></div>
         </center>
